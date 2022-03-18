@@ -1,12 +1,8 @@
 import './App.css';
-import FilmList from './FilmList';
+import FilmApp from './FilmApp';
 
 function App() {
-  return (
-    <div className="container">
-      <FilmList />
-    </div>
-  );
+  return (<FilmApp />);
 }
 
 export default App;
