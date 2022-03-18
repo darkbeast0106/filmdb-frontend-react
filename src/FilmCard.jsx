@@ -2,7 +2,7 @@ import React from "react";
 
 class FilmCard extends React.Component {
   render() {
-    const { film, torlesClick } = this.props;
+    const { film, torlesClick, modositClick } = this.props;
 
     return (
       <div className="col-sm-6 cold-md-4 col-lg-3 FilmCard">
@@ -18,7 +18,10 @@ class FilmCard extends React.Component {
             </ul>
           </div>
           <div className="card-footer">
-            <button onClick={() => torlesClick(film.id)} className="btn btn-danger">Törlés</button>
+            <div className="row">
+              <button onClick={() => torlesClick(film.id)} className="btn btn-danger col-6">Törlés</button>
+              <button onClick={() => modositClick(film)} className="btn btn-warning col-6">Módosítás</button>
+            </div>
           </div>
         </div>
       </div>
